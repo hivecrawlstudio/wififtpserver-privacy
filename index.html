@@ -138,7 +138,7 @@
 
 <div class="container">
 
-  <span class="effective">Effective Date: September 1, 2026 · App version 1.0.9</span>
+  <span class="effective">Effective Date: September 2, 2026 · App version 1.0.11</span>
 
   <h1>Privacy Policy</h1>
   <p>
@@ -197,9 +197,12 @@
   <ul>
     <li><strong>Photos, Videos, Audio, Documents</strong> — read from your device's MediaStore and sent
         directly to the receiving phone.</li>
-    <li><strong>Apps</strong> — the installer files (APKs) of the user-installed apps you select are sent.
-        App data and logins are <em>not</em> included. On the receiving phone, each install is confirmed
-        by Android's own system installer dialog.</li>
+    <li><strong>Apps</strong> — to show you what can be sent, the App reads the list of apps installed on
+        this phone. That list is used on-device only, to build the picker; it is never sent to us or to
+        any third party. If you select the Apps bucket, the installer files (APKs) of the apps you picked
+        are sent to the receiving phone. App data and logins are <em>not</em> included. The App does not
+        install anything: received APKs are saved to the <code>Clone/Apps</code> folder, and installing
+        them is entirely up to you, from your own file manager.</li>
     <li><strong>Contacts</strong> — if and only if you select the Contacts bucket and grant the contacts
         permission, your address book is exported to a single standard vCard file
         (<code>contacts.vcf</code>) in the App's private cache, sent to the receiving phone, then
@@ -251,7 +254,8 @@
     <li>Usage analytics or crash reports sent to us</li>
     <li>The names, contents, or metadata of your files</li>
     <li>Your contacts, call logs, or messages</li>
-    <li>The list of apps installed on your device</li>
+    <li>The list of apps installed on your device (it is read on-device only, to build the Clone
+        picker described in section 2.3, and is never transmitted off your phone by us)</li>
     <li>Photos or camera images (the camera is used only to decode a pairing QR code on screen;
         no image is stored or sent)</li>
     <li>Your Wi-Fi network name or credentials</li>
@@ -369,15 +373,6 @@
           The camera preview is decoded on-device in real time; no photo or video is saved,
           stored, or transmitted. Pairing can also be completed without the camera by typing
           the on-screen code.
-        </td>
-      </tr>
-      <tr>
-        <td><code>REQUEST_INSTALL_PACKAGES</code></td>
-        <td>
-          Used only for the Apps bucket of Clone: after installer files (APKs) have been received
-          from the other phone, the App hands them to Android's own package installer. Every
-          install still ends at the system's confirmation dialog, which you must approve.
-          Nothing is installed silently, and the App never downloads apps from the internet.
         </td>
       </tr>
       <tr>
@@ -575,7 +570,7 @@
   </div>
 
   <footer>
-    <p>WiFi File Transfer: FTP Server &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Last updated: September 1, 2026</p>
+    <p>WiFi File Transfer: FTP Server &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; Last updated: September 2, 2026</p>
     <p style="margin-top:6px">This app does not collect, store, or share any personal data.</p>
   </footer>
 
